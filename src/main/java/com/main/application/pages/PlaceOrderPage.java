@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class PlaceOrderPage {
 	WebDriver driver;
-	public PlaceOrderPage(WebDriver driver) {
+	public PlaceOrderPage() {
 		PageFactory.initElements(driver, this);
 		PageFactory.initElements(new AjaxElementLocatorFactory(driver, 2), this);
 	}

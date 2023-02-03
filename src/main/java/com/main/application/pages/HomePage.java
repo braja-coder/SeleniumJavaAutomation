@@ -20,11 +20,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.main.allvariables.AllVariables;
+import com.main.coreframework.Base;
 
 
 public class HomePage{
-	WebDriver driver;
-	public HomePage(WebDriver driver) {
+ private WebDriver driver = AllVariables.driver;
+	public HomePage() {
 		PageFactory.initElements(driver, this);
 		PageFactory.initElements(new AjaxElementLocatorFactory(driver, 2), this);
 	}

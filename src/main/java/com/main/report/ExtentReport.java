@@ -22,8 +22,7 @@ public class ExtentReport extends Base {
             report = new ExtentReports(fileName, true, DisplayOrder.NEWEST_FIRST);
             report.loadConfig(new File(System.getProperty("user.dir") + extentconfigfile));
             report.addSystemInfo("Selenium version", "4.1.2").addSystemInfo("Environment", "X86_PREPROD");
-                 
-            
+    
         }
         return report;
     }

@@ -12,15 +12,15 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 
 public class AllVariables {
-	public WebDriver driver;
+	public static WebDriver driver;
 	public static WebElement element;
     public static ExtentReports report;
     public static ExtentTest test;
  
-    public static String customReportslocation = "test-output/customReports/";
+    public static String customReportslocation = "target/customReports/";
     public static String customReportName = "extent-report";
     public static String extentconfigfile = "/Extent-Config.xml";
-    public static String screenshotlocation = "test-output/customReports/screenshots/";
+    public static String screenshotlocation = "target/customReports/screenshots/";
     public static String testdataInputPath="/src/test/resources/excelsheets/TestData.xls";
 
 }

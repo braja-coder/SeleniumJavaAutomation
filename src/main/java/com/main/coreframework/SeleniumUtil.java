@@ -52,7 +52,7 @@ public class SeleniumUtil extends Base {
         return false;
     }
 
-    public void selectValuedropDownText(WebElement element, String text) {
+    public static void selectValuedropDownText(WebElement element, String text) {
         Select dropdown = new Select(element);
         dropdown.selectByVisibleText(text);
     }

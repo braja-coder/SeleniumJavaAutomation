@@ -3,6 +3,8 @@
  */
 package com.mycom.aut.application;
 
+import java.util.logging.Logger;
+
 import org.testng.annotations.Test;
 
 import com.google.common.base.Verify;
@@ -22,31 +24,33 @@ import junit.framework.Assert;
 
 
 public class ApplicationTest1 extends BaseTest {
- //   WebDriver driver;
+ 
     
     @Test(priority=0)
     public void untilHomePage() {
-        HomePage homePage = new HomePage(driver);
+        HomePage homePage = new HomePage();
     try {
        test = report.startTest("in home page");
        test.log(LogStatus.INFO, "launched url");
+       log.info("launched URL");
        homePage.tabletLink.click();
        test.log(LogStatus.INFO, "clicked on tablet");
        homePage.LaptopNotebookLink.click();
        test.log(LogStatus.INFO, "clicked on laptopnotebook");
        homePage.LaptopLink.click();
+       log.info("Test case passed");
        test.log(LogStatus.INFO, "clicked on laptop");
     }catch(Exception e) {
     	e.printStackTrace();
     	Verify.verify(false, "Testc case failed");
-   
-    	test.log(LogStatus.ERROR, "testcase failed");
-    }
+    	log.info("Test case failed");
+       	test.log(LogStatus.ERROR, "testcase failed");
+      }
     }
     
     @Test(priority=1)
     public void untilSelectCartPage() throws InterruptedException {
-        SelectCartPage selectCartPage =  new SelectCartPage(driver);
+        SelectCartPage selectCartPage =  new SelectCartPage();
     try {
        test = report.startTest("in selct cart page");
        selectCartPage.delivaryDate.clear();
@@ -68,9 +72,9 @@ public class ApplicationTest1 extends BaseTest {
     }
     }
     
-  /*  @Test(priority=2)
+    @Test(priority=2)
     public void untilPlaceOrderPage() {
-    	   PlaceOrderPage placeOrderPage = new PlaceOrderPage(driver);
+    	   PlaceOrderPage placeOrderPage = new PlaceOrderPage();
     try {
        test = report.startTest("in place order page");
   //     Thread.sleep(1000);
@@ -103,7 +107,7 @@ public class ApplicationTest1 extends BaseTest {
     
     @Test(priority=3)
     public void untilCheckOutPage() throws InterruptedException {
-    	 CheckOutPage checkoutPage = new CheckOutPage(driver);
+    	 CheckOutPage checkoutPage = new CheckOutPage();
     try {
     	 test = report.startTest("in place order page");
          checkoutPage.continueButtonDelivaryMethod.click();
@@ -123,6 +127,6 @@ public class ApplicationTest1 extends BaseTest {
     	Verify.verify(false, "Test case failed");
     	
     }
+    
     }
-*/
 }

@@ -10,11 +10,13 @@ import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.main.allvariables.AllVariables;
 import com.main.application.popups.CartPopup;
+import com.main.coreframework.Base;
 
-public class SelectCartPage {
-	WebDriver driver;
-	public SelectCartPage(WebDriver driver) {
+public class SelectCartPage extends Base {
+	WebDriver driver = AllVariables.driver;
+	public SelectCartPage() {
 		PageFactory.initElements(driver, this);
 		PageFactory.initElements(new AjaxElementLocatorFactory(driver, 2), this);
 	}

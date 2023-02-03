@@ -22,6 +22,10 @@ public class Commonconfig extends GetProperties{
 	public static final String country = getProperty("config.properties", "country");
 	public static final String state = getProperty("config.properties", "state");
 	public static final String orderplacemessage = getProperty("config.properties", "orderplacemessage");
+	public static final String userName1 = getProperty("config.properties", "userName1");
+	public static final String password1 = getProperty("config.properties", "password1");
+	public static final String userName2 = getProperty("config.properties", "userName2");
+	public static final String password2 = getProperty("config.properties", "password2");
 	
 	
 	

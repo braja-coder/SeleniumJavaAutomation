@@ -12,9 +12,12 @@ import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class CheckOutPage {
-	WebDriver driver;
-	public CheckOutPage(WebDriver driver) {
+import com.main.allvariables.AllVariables;
+import com.main.coreframework.Base;
+
+public class CheckOutPage extends Base {
+	WebDriver driver = AllVariables.driver;
+	public CheckOutPage() {
 		PageFactory.initElements(driver, this);
 		PageFactory.initElements(new AjaxElementLocatorFactory(driver, 2), this);
 	}
